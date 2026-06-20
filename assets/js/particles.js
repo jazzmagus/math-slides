@@ -18,15 +18,22 @@ class ParticlesBackground {
     this.opacity = options.opacity || 0.15;
     this.linkDistance = options.linkDistance || 150;
     this.particles = [];
+    this.bgColor = null;
 
-    this.isDark =
-      window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    this.isDark = document.documentElement.classList.contains('dark-mode') ||
+      (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
     this.resizeCanvas();
     this.initParticles();
     this.animate();
 
     window.addEventListener('resize', () => this.resizeCanvas());
+  }
+
+  setTheme(colorLight, colorDark, bgColor = null) {
+    this.colorLight = colorLight;
+    this.colorDark = colorDark;
+    this.bgColor = bgColor;
   }
 
   resizeCanvas() {
@@ -48,9 +55,18 @@ class ParticlesBackground {
   }
 
   animate() {
+    this.isDark = document.documentElement.classList.contains('dark-mode');
+
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
+    if (this.bgColor) {
+      this.ctx.fillStyle = this.bgColor;
+      this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+
     const color = this.isDark ? this.colorDark : this.colorLight;
+    const activeColor = color + Math.round(this.opacity * 255).toString(16).padStart(2, '0');
+    const linkColor = color + Math.round(this.opacity * 0.5 * 255).toString(16).padStart(2, '0');
 
     // Aggiorna e disegna particelle
     for (let i = 0; i < this.particles.length; i++) {
@@ -69,7 +85,7 @@ class ParticlesBackground {
       p.y = Math.max(0, Math.min(this.canvas.height, p.y));
 
       // Disegna particella
-      this.ctx.fillStyle = `rgba(237, 111, 92, ${this.opacity})`;
+      this.ctx.fillStyle = activeColor;
       this.ctx.beginPath();
       this.ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
       this.ctx.fill();
@@ -85,7 +101,7 @@ class ParticlesBackground {
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < this.linkDistance) {
-          this.ctx.strokeStyle = `rgba(237, 111, 92, ${this.opacity * 0.5})`;
+          this.ctx.strokeStyle = linkColor;
           this.ctx.lineWidth = 0.5;
           this.ctx.beginPath();
           this.ctx.moveTo(p1.x, p1.y);
@@ -99,9 +115,9 @@ class ParticlesBackground {
   }
 }
 
-// Inizializza al caricamento della pagina
+// Inizializza al caricamento della pagina — esposta globalmente per slide-change
 document.addEventListener('DOMContentLoaded', () => {
-  new ParticlesBackground({
+  window.particles = new ParticlesBackground({
     count: 120,
     colorLight: '#ed6f5c',
     colorDark: '#f08e7c',

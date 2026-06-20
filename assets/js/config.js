@@ -89,3 +89,29 @@ function toggleDarkMode() {
 }
 
 document.addEventListener('DOMContentLoaded', initDarkModeToggle);
+
+/* Cambia colore particelle sulla slide citazione */
+(function () {
+  const CORAL = '#ed6f5c';
+  const CORAL_DARK = '#f08e7c';
+  const WHITE = '#ffffff';
+
+  function updateParticles(slide) {
+    if (!window.particles || !slide) return;
+    if (slide.classList.contains('quote-slide')) {
+      window.particles.setTheme(WHITE, WHITE, CORAL);
+    } else {
+      window.particles.setTheme(CORAL, CORAL_DARK, null);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const tryAttach = setInterval(() => {
+      if (typeof Reveal !== 'undefined' && Reveal.isReady && Reveal.isReady()) {
+        clearInterval(tryAttach);
+        Reveal.on('slidechanged', (e) => updateParticles(e.currentSlide));
+        updateParticles(Reveal.getCurrentSlide());
+      }
+    }, 200);
+  });
+}());
