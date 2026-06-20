@@ -1,0 +1,19 @@
+{
+  "name": "reveal-slides",
+  "version": "1.0.0",
+  "description": "Minimalista Reveal.js presentations template — coerente con mathofthings design",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server . -p 3000 -o index.html",
+    "serve": "http-server . -p 3000"
+  },
+  "keywords": ["reveal.js", "presentations", "minimal"],
+  "author": "Diego Fantinelli",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "reveal.js": "^4.2.0"
+  }
+}

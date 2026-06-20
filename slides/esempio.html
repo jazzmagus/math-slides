@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esempio Presentazione — Reveal.js</title>
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/serif.css" />
+
+    <!-- Custom Theme -->
+    <link rel="stylesheet" href="../assets/css/theme.css" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Particles Background Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Reveal.js Presentation -->
+    <div class="reveal">
+      <div class="slides">
+        <!-- SEZIONE 1: TITOLO -->
+        <section class="title-slide">
+          <h1>Titolo della Presentazione</h1>
+          <p class="subtitle">Sottotitolo opzionale</p>
+          <p style="margin-top: 3em; font-size: 0.7em; color: rgba(44, 37, 32, 0.5)">
+            Diego Fantinelli
+          </p>
+        </section>
+
+        <!-- SEZIONE 2: INTRODUZIONE -->
+        <section>
+          <h2>Introduzione</h2>
+          <p>Descrizione generale degli argomenti che tratteremo.</p>
+          <ul>
+            <li>Primo punto</li>
+            <li>Secondo punto</li>
+            <li>Terzo punto</li>
+          </ul>
+        </section>
+
+        <!-- SEZIONE 3: CONTENUTO PRINCIPALE -->
+        <section>
+          <section>
+            <h2>Capitolo 1: Fondamenti</h2>
+            <p>Concetti base e definizioni.</p>
+          </section>
+
+          <section>
+            <h3>1.1 Definizione Principale</h3>
+
+            <div class="definition-block">
+              <div class="label">Definizione</div>
+              <p>
+                Un concetto <em>importante</em> che serve a comprendere il resto
+                della trattazione.
+              </p>
+            </div>
+
+            <div style="margin-top: 2em">
+              <p>Formula correlata:</p>
+              <div class="math">$$y = f(x)$$</div>
+            </div>
+          </section>
+
+          <section>
+            <h3>1.2 Proprietà Fondamentali</h3>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Proprietà</th>
+                  <th>Descrizione</th>
+                  <th>Esempio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Proprietà A</td>
+                  <td>Prima proprietà importante</td>
+                  <td>$a + b = c$</td>
+                </tr>
+                <tr>
+                  <td>Proprietà B</td>
+                  <td>Seconda proprietà importante</td>
+                  <td>$x^2 = y$</td>
+                </tr>
+                <tr>
+                  <td>Proprietà C</td>
+                  <td>Terza proprietà importante</td>
+                  <td>$\sin(\theta) = z$</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <!-- SEZIONE 4: ESEMPI PRATICI -->
+        <section>
+          <section>
+            <h2>Capitolo 2: Esempi Pratici</h2>
+            <p>Applicazioni concrete dei concetti.</p>
+          </section>
+
+          <section>
+            <h3>2.1 Esempio Semplice</h3>
+
+            <p>Consideriamo il seguente problema:</p>
+
+            <div class="definition-block">
+              <div class="label">Problema</div>
+              <p>Dato $f(x) = 2x + 3$, trovare $f(5)$.</p>
+            </div>
+
+            <div style="margin-top: 1.5em">
+              <p><strong>Soluzione:</strong></p>
+              <pre><code>f(5) = 2(5) + 3
+f(5) = 10 + 3
+f(5) = 13</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h3>2.2 Esempio Complesso</h3>
+
+            <p>Un problema che richiede più passaggi.</p>
+
+            <ol style="font-size: 0.9em">
+              <li>Identifichiamo i dati noti</li>
+              <li>Scriviamo l'equazione</li>
+              <li>Isoliamo l'incognita</li>
+              <li>Verifichiamo la soluzione</li>
+            </ol>
+
+            <div class="note">
+              L'ordine dei passaggi è fondamentale per evitare errori!
+            </div>
+          </section>
+        </section>
+
+        <!-- SEZIONE 5: ESERCIZI -->
+        <section>
+          <h2>Esercizi</h2>
+
+          <div class="definition-block">
+            <div class="label">Esercizio 1</div>
+            <p>Risolvi l'equazione: $3x - 7 = 8$</p>
+          </div>
+
+          <div class="definition-block" style="margin-top: 1.5em">
+            <div class="label">Esercizio 2</div>
+            <p>Calcola il valore di $g(x) = x^2 - 4x + 3$ per $x = 2$</p>
+          </div>
+
+          <div class="note" style="margin-top: 1.5em">
+            Prova a risolverli autonomamente prima di guardare le soluzioni!
+          </div>
+        </section>
+
+        <!-- SEZIONE 6: RIFLESSIONE CONCLUSIVA -->
+        <section>
+          <h2>Punti Chiave</h2>
+
+          <ul>
+            <li>Il concetto principale è <em>questo</em></li>
+            <li>Le proprietà fondamentali sono <em>queste</em></li>
+            <li>La pratica è essenziale per imparare</li>
+            <li>Non esitare a chiedere chiarimenti</li>
+          </ul>
+
+          <blockquote style="margin-top: 2em">
+            La comprensione viene dalla pratica costante e dal desiderio di
+            apprendere.
+          </blockquote>
+        </section>
+
+        <!-- SLIDE FINALE -->
+        <section class="title-slide">
+          <h2>Grazie per l'attenzione!</h2>
+          <p style="margin-top: 2em; font-size: 1em">Domande?</p>
+          <p style="margin-top: 3em; font-size: 0.7em; color: rgba(44, 37, 32, 0.5)">
+            The Math of Things
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Reveal.js Core JS -->
+    <script src="../node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="../node_modules/reveal.js/dist/plugin/markdown/markdown.js"></script>
+    <script src="../node_modules/reveal.js/dist/plugin/highlight/highlight.js"></script>
+    <script src="../node_modules/reveal.js/dist/plugin/notes/notes.js"></script>
+    <script src="../node_modules/reveal.js/dist/plugin/math/math.js"></script>
+
+    <!-- Particles Background -->
+    <script src="../assets/js/particles.js"></script>
+
+    <!-- Config Reveal.js -->
+    <script src="../assets/js/config.js"></script>
+
+    <!-- Inizializza Reveal.js -->
+    <script>
+      Reveal.initialize(revealConfig).catch((err) => {
+        console.error('Errore inizializzazione Reveal.js:', err);
+      });
+    </script>
+
+    <!-- MathJax per rendering formule -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </body>
+</html>
