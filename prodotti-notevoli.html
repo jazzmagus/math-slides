@@ -3,15 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TITOLO — The Math of Things</title>
+    <title>I Prodotti Notevoli — The Math of Things</title>
 
     <link rel="stylesheet" href="vendor/reveal.js/dist/reveal.css" />
     <link rel="stylesheet" href="vendor/reveal.js/dist/theme/serif.css" />
     <link rel="stylesheet" href="assets/css/theme.css" />
 
-    <style>
-      body { margin: 0; padding: 0; overflow: hidden; }
-    </style>
+    <style>body { margin: 0; padding: 0; overflow: hidden; }</style>
   </head>
 
   <body>
@@ -34,108 +32,444 @@
     <div class="reveal">
       <div class="slides">
 
-        <!-- ══════════════════════════════════════════
-             SLIDE TITOLO
-             ══════════════════════════════════════════ -->
+        <!-- TITLE SLIDE -->
         <section class="title-slide">
-          <h1>Titolo <em>Principale</em></h1>
-          <p class="subtitle">Sottotitolo della <em>presentazione</em></p>
+          <h1>I Prodotti <em>Notevoli</em></h1>
+          <p class="subtitle">Riconoscere, sviluppare, <em>scomporre</em></p>
           <div style="margin-top:1em;font-size:0.85em;line-height:1.7;max-width:90%;margin-left:auto;margin-right:auto;color:rgba(44,37,32,0.8);">
-            <p>Descrizione introduttiva. Inserire qui una frase che contestualizza l'argomento e motiva lo studente.</p>
+            <p>Classi terze — IIS "G.A. Remondini", Bassano del Grappa</p>
           </div>
           <p style="margin-top:1.2em;font-size:0.7em;">
             <a href="https://mathofthings.netlify.app" class="math-of-things-link">The Math of Things</a>
           </p>
         </section>
 
-        <!-- ══════════════════════════════════════════
-             SEZIONE 1 — TITOLO SEZIONE (orizzontale)
-             Navigazione: → avanza sezione
-                          ↓ scende nelle sotto-slide
-             ══════════════════════════════════════════ -->
+        <!-- SEZIONE 1: INTRODUZIONE -->
+        <section>
+          <section>
+            <h2>Cosa sono i Prodotti <em>Notevoli</em>?</h2>
+            <div class="definition-block">
+              <div class="label">Definizione</div>
+              <p>I <strong>Prodotti Notevoli</strong> sono formule algebriche che permettono di sviluppare velocemente determinate potenze e prodotti tra polinomi, e viceversa di <em>scomporre</em> determinati tipi di polinomi.</p>
+              <p style="margin-top:0.5em;">Vengono chiamati "notevoli" perché si riferiscono a prodotti <strong>ricorrenti</strong> nel calcolo polinomiale.</p>
+            </div>
+            <div class="callout callout-note" style="margin-top:0.8em;">
+              <span class="callout-label">Chiave di lettura:</span>
+              Ogni formula va letta <em>in entrambe le direzioni</em>: da sinistra a destra per <strong>sviluppare</strong>, da destra a sinistra per <strong>fattorizzare</strong>.
+            </div>
+            <aside class="notes">
+              <p>La metà degli studenti li impara solo in una direzione. L'altra metà li dimentica entrambe dopo la verifica.</p>
+            </aside>
+          </section>
+        </section>
+
+        <!-- SEZIONE 2: SOMMA PER DIFFERENZA -->
         <section>
 
-          <!-- Slide intro sezione -->
           <section>
-            <h2>Titolo <em>Sezione</em> 1</h2>
-            <p>Frase introduttiva della sezione.</p>
-          </section>
-
-          <!-- Slide metodo con "In che cosa consiste" -->
-          <section>
-            <h2>Metodo 1: <em>Nome</em> Metodo</h2>
+            <h2>Metodo 1: <em>Somma</em> per Differenza</h2>
             <div style="margin-top:1.5em;">
               <p style="font-size:0.95em;line-height:1.8;">
                 <span style="font-family:'JetBrains Mono',monospace;font-size:0.9em;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em;">In che cosa consiste:</span>
-                <span style="display:block;margin-top:0.5em;">Descrizione del metodo. Spiegare l'idea chiave in modo diretto e motivante.</span>
+                <span style="display:block;margin-top:0.5em;">Il prodotto tra la somma e la differenza di due monomi $A$ e $B$ produce sempre la <em>differenza dei quadrati</em>. I termini misti si cancellano a vicenda — è la formula più elegante della famiglia.</span>
               </p>
             </div>
             <aside class="notes">
-              <p>Note per il docente.</p>
+              <p>Fateli sviluppare il prodotto a mano prima di rivelare la formula. La sorpresa di vedere i termini medi cancellarsi vale più di dieci spiegazioni.</p>
             </aside>
           </section>
 
-          <!-- Slide due colonne: formula sx, esempi dx -->
           <section>
-            <h3>Titolo <em>Argomento</em></h3>
+            <h3>La <em>formula</em></h3>
             <div class="two-columns">
               <div>
-                <!-- Colonna sinistra: sempre visibile -->
-                <div class="math">$$formula = risultato$$</div>
+                <div class="math">$$(A+B)(A-B) = A^2 - B^2$$</div>
+                <p style="font-size:0.78em;margin-top:1.2em;font-style:italic;color:rgba(44,37,32,0.7);">Il prodotto della somma per la differenza è uguale alla differenza dei quadrati dei due termini.</p>
               </div>
               <div class="fragment">
-                <!-- Colonna destra: appare con tasto -->
-                <div style="border:1px solid rgba(237,111,92,0.3);border-radius:4px;padding:12px;">
-                  <p class="example-label">Es. 1:</p>
-                  <p>$esempio_1$</p>
-                  <p style="margin-top:1em;" class="example-label">Es. 2:</p>
-                  <p>$esempio_2$</p>
+                <p style="font-size:0.82em;margin-bottom:0.4em;"><strong>Dimostrazione:</strong></p>
+                <div class="math" style="font-size:0.88em;">
+                  $$(A+B)(A-B) = A^2 - AB + AB - B^2 = A^2 - B^2$$
+                </div>
+                <div class="callout callout-note" style="margin-top:0.8em;">
+                  <span class="callout-label">Nota:</span>
+                  I termini $-AB$ e $+AB$ si cancellano. I segni dei due fattori non cambiano il risultato finale.
                 </div>
               </div>
             </div>
             <aside class="notes">
-              <p>Note per il docente.</p>
+              <p>I termini si cancellano sempre. Anche se uno studente ci crede solo a metà.</p>
             </aside>
           </section>
 
-          <!-- Slide contenuto semplice (lista o paragrafo) -->
           <section>
-            <h3>Titolo <em>Slide</em></h3>
-            <ul style="font-size:0.9em;line-height:1.9;">
-              <li>Punto 1</li>
-              <li>Punto 2</li>
-              <li>Punto 3</li>
-            </ul>
+            <h3>Esempio <em>svolto</em></h3>
+            <div class="two-columns">
+              <div>
+                <p class="example-label">Riconosci la struttura:</p>
+                <div class="math" style="font-size:0.88em;">$$(2a^2 + 3b^3)(2a^2 - 3b^3)$$</div>
+                <div class="callout callout-note" style="margin-top:1em;">
+                  <span class="callout-label">Suggerimento:</span>
+                  Assegna $A = 2a^2$, $\quad B = 3b^3$.
+                </div>
+              </div>
+              <div class="fragment">
+                <p class="example-label">Applica la formula:</p>
+                <div class="math" style="font-size:0.88em;">
+                  $$= \underbrace{(2a^2)^2}_{A^2} - \underbrace{(3b^3)^2}_{B^2} = 4a^4 - 9b^6$$
+                </div>
+                <div class="callout callout-warn" style="margin-top:0.8em;">
+                  <span class="callout-label">Errore tipico:</span>
+                  Cambiare il segno finale "perché c'è un meno". No: il risultato è <em>sempre</em> $A^2 - B^2$.
+                </div>
+              </div>
+            </div>
             <aside class="notes">
-              <p>Note per il docente.</p>
+              <p>L'errore tipico ha la tenacia di un virus influenzale. Compare ogni anno alla verifica.</p>
             </aside>
           </section>
 
         </section>
 
-        <!-- ══════════════════════════════════════════
-             SEZIONE 2 — aggiungere sezioni analoghe
-             ══════════════════════════════════════════ -->
+        <!-- SEZIONE 3: QUADRATO DI BINOMIO -->
         <section>
+
           <section>
-            <h2>Titolo <em>Sezione</em> 2</h2>
-            <p>Frase introduttiva.</p>
+            <h2>Metodo 2: <em>Quadrato</em> di Binomio</h2>
+            <div style="margin-top:1.5em;">
+              <p style="font-size:0.95em;line-height:1.8;">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:0.9em;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em;">In che cosa consiste:</span>
+                <span style="display:block;margin-top:0.5em;">Il quadrato di un binomio $(A \pm B)^2$ si espande in tre termini: il quadrato del primo, il <em>doppio prodotto</em> e il quadrato del secondo. Il segno del doppio prodotto segue il segno del binomio.</span>
+              </p>
+            </div>
+            <aside class="notes">
+              <p>Il termine $2AB$ è la fonte del 90% degli errori. C'è una legge della natura che impedisce agli studenti di ricordarlo al primo anno.</p>
+            </aside>
           </section>
+
+          <section>
+            <h3>Le <em>formule</em></h3>
+            <div class="two-columns">
+              <div>
+                <div class="math" style="font-size:0.88em;">$$(A+B)^2 = A^2 + 2AB + B^2$$</div>
+                <div class="math" style="font-size:0.88em;">$$(A-B)^2 = A^2 - 2AB + B^2$$</div>
+                <div class="math" style="font-size:0.88em;">$$(A \pm B)^2 = A^2 \pm 2AB + B^2$$</div>
+              </div>
+              <div class="fragment">
+                <p style="font-size:0.82em;margin-bottom:0.4em;"><strong>Dimostrazione:</strong></p>
+                <div class="math" style="font-size:0.82em;">
+                  $$(A+B)^2 = (A+B)(A+B) = A^2 + AB + BA + B^2 = A^2 + 2AB + B^2$$
+                </div>
+                <div class="callout callout-warn" style="margin-top:0.8em;">
+                  <span class="callout-label">Errore classico:</span>
+                  $(A+B)^2 \neq A^2 + B^2$ — il termine $2AB$ non si omette mai.
+                </div>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>$(A+B)^2 \neq A^2 + B^2$. Non è matematica, è un dogma. Ripeterlo fino all'esaurimento delle forze.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Perché compare <em>$2AB$</em>?</h3>
+            <p style="font-size:0.85em;margin-bottom:0.6em;">La risposta è nel prodotto riga per colonna:</p>
+            <div class="math" style="font-size:0.88em;">
+              $$(A+B)^2 = (A+B)(A+B) = A^2 + AB + BA + B^2 = A^2 + 2AB + B^2$$
+            </div>
+            <div class="callout callout-note" style="margin-top:0.8em;">
+              <span class="callout-label">Perché 2:</span>
+              $AB$ e $BA$ sono uguali per la proprietà commutativa — si sommano e diventano $2AB$.
+            </div>
+            <div class="callout callout-warn" style="margin-top:0.6em;">
+              <span class="callout-label">Errore classico:</span>
+              $(A+B)^2 = A^2 + B^2$ — i quadrati non si "distribuiscono" su una somma.
+            </div>
+            <aside class="notes">
+              <p>Questo errore colpisce il 100% degli studenti almeno una volta. Si chiama "la trappola del quadrato distribuito".</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Esempi e <em>segni</em></h3>
+            <p style="font-size:0.85em;margin-bottom:0.6em;">I quadrati sono sempre positivi. Il doppio prodotto cambia segno con il binomio:</p>
+            <div class="math" style="font-size:0.88em;">$$(2ab^3 + 3cx)^2 = 4a^2b^6 + 9c^2x^2 + 12ab^3cx$$</div>
+            <div class="math" style="font-size:0.88em;">$$(2ab^3 - 3cx)^2 = 4a^2b^6 + 9c^2x^2 - 12ab^3cx$$</div>
+            <div class="callout callout-note" style="margin-top:0.8em;">
+              <span class="callout-label">Trucco per i segni:</span>
+              Usa sempre la forma con $+$ inserendo ogni monomio col suo segno: $(2ab^3 + (-3cx))^2$.
+            </div>
+            <aside class="notes">
+              <p>Il trucco del + è quello che insegni il secondo anno quando non vuoi più correggere gli stessi errori del primo.</p>
+            </aside>
+          </section>
+
         </section>
 
-        <!-- ══════════════════════════════════════════
-             SLIDE FINALE
-             ══════════════════════════════════════════ -->
-        <section class="title-slide">
-          <h2><em>Prossimi</em> Passi</h2>
-          <ul style="font-size:0.95em;line-height:2;">
-            <li>Argomento successivo 1</li>
-            <li>Argomento successivo 2</li>
-            <li>Argomento successivo 3</li>
-          </ul>
-          <p style="margin-top:2em;font-size:0.7em;">
-            <a href="https://mathofthings.netlify.app" class="math-of-things-link">The Math of Things</a>
-          </p>
+        <!-- SEZIONE 4: QUADRATO DI TRINOMIO -->
+        <section>
+
+          <section>
+            <h2>Metodo 3: <em>Quadrato</em> di Trinomio</h2>
+            <div style="margin-top:1.5em;">
+              <p style="font-size:0.95em;line-height:1.8;">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:0.9em;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em;">In che cosa consiste:</span>
+                <span style="display:block;margin-top:0.5em;">Il quadrato di un trinomio $(A+B+C)^2$ produce tre quadrati e <em>tre doppi prodotti</em> — uno per ogni coppia di termini. La struttura è analoga al binomio, ma con più termini crociati.</span>
+              </p>
+            </div>
+            <aside class="notes">
+              <p>Tre doppi prodotti, non due. Non uno. Tre. Questo fatto sfugge regolarmente, come le chiavi di casa.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>La <em>formula</em></h3>
+            <div class="two-columns">
+              <div>
+                <div class="math" style="font-size:0.85em;">
+                  $$(A+B+C)^2 =$$
+                  $$A^2+B^2+C^2+2AB+2AC+2BC$$
+                </div>
+              </div>
+              <div class="fragment">
+                <p style="font-size:0.82em;margin-bottom:0.4em;"><strong>Struttura:</strong></p>
+                <ul style="font-size:0.82em;line-height:1.9;">
+                  <li>Tre quadrati: $A^2$, $B^2$, $C^2$</li>
+                  <li>Tre doppi prodotti: $2AB$, $2AC$, $2BC$</li>
+                </ul>
+                <div class="callout callout-note" style="margin-top:0.8em;">
+                  <span class="callout-label">Trucco:</span>
+                  Fai un "triangolo" tra i tre termini e spunta ogni coppia una volta: $A$-$B$, $A$-$C$, $B$-$C$.
+                </div>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>Il triangolo delle coppie funziona anche per polinomi con quattro termini, se mai qualcuno avesse quella sfortuna.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Esempio e <em>errori tipici</em></h3>
+            <div class="math" style="font-size:0.85em;">
+              $$(2a + b^2 - x^3y)^2 = 4a^2 + b^4 + x^6y^2 + 4ab^2 - 4ax^3y - 2b^2x^3y$$
+            </div>
+            <div class="callout callout-warn" style="margin-top:0.8em;">
+              <span class="callout-label">Errore tipico:</span>
+              Scrivere $(A+B+C)^2 = A^2+B^2+C^2+2AB+2AC$ dimenticando $2BC$. I doppi prodotti sono <strong>tre</strong>.
+            </div>
+            <div class="callout callout-note" style="margin-top:0.6em;">
+              <span class="callout-label">Regola:</span>
+              I doppi prodotti sono $\binom{n}{2}$ dove $n$ è il numero di termini — per tre termini: $\binom{3}{2} = 3$.
+            </div>
+            <aside class="notes">
+              <p>La coppia $B$-$C$ viene dimenticata con la stessa precisione statistica con cui si dimentica il terzo scalino al buio.</p>
+            </aside>
+          </section>
+
+        </section>
+
+        <!-- SEZIONE 5: CUBO DI BINOMIO -->
+        <section>
+
+          <section>
+            <h2>Metodo 4: <em>Cubo</em> di Binomio</h2>
+            <div style="margin-top:1.5em;">
+              <p style="font-size:0.95em;line-height:1.8;">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:0.9em;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em;">In che cosa consiste:</span>
+                <span style="display:block;margin-top:0.5em;">Il cubo di un binomio $(A \pm B)^3$ si espande in quattro termini con coefficienti $1, 3, 3, 1$ — i coefficienti binomiali della terza riga del triangolo di Pascal.</span>
+              </p>
+            </div>
+            <aside class="notes">
+              <p>Citare Pascal è facoltativo. Di fronte a una classe di terza produce rispetto reverenziale e nessuna connessione emotiva.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Le <em>formule</em></h3>
+            <div class="two-columns">
+              <div>
+                <div class="math" style="font-size:0.88em;">$$(A+B)^3 = A^3 + 3A^2B + 3AB^2 + B^3$$</div>
+                <div class="math" style="font-size:0.88em;">$$(A-B)^3 = A^3 - 3A^2B + 3AB^2 - B^3$$</div>
+              </div>
+              <div class="fragment">
+                <p style="font-size:0.82em;margin-bottom:0.4em;"><strong>Derivazione:</strong></p>
+                <div class="math" style="font-size:0.8em;">
+                  $$(A+B)^3 = (A+B)(A+B)^2 = (A+B)(A^2+2AB+B^2)$$
+                  $$= A^3 + 3A^2B + 3AB^2 + B^3$$
+                </div>
+                <ul style="font-size:0.78em;line-height:1.8;margin-top:0.5em;">
+                  <li>cubo del primo: $A^3$</li>
+                  <li>triplo $A^2$ per $B$: $3A^2B$</li>
+                  <li>triplo $A$ per $B^2$: $3AB^2$</li>
+                  <li>cubo del secondo: $B^3$</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>I coefficienti 1-3-3-1. Si ricordano con Pascal, oppure con la sofferenza di un prodotto fatto a mano alle 23:00 prima della verifica.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Esempio <em>svolto</em></h3>
+            <div class="math" style="font-size:0.9em;">$$(2a - b^2)^3 = \bigl(2a + (-b^2)\bigr)^3$$</div>
+            <div class="math" style="font-size:0.85em;">
+              $$= (2a)^3 + 3(2a)^2(-b^2) + 3(2a)(-b^2)^2 + (-b^2)^3$$
+            </div>
+            <div class="math" style="font-size:0.9em;">$$= 8a^3 - 12a^2b^2 + 6ab^4 - b^6$$</div>
+            <div class="callout callout-note" style="margin-top:0.8em;">
+              <span class="callout-label">Suggerimento:</span>
+              Scrivi sempre $\bigl(2a + (-b^2)\bigr)^3$ — i segni emergono naturalmente dai calcoli.
+            </div>
+            <aside class="notes">
+              <p>Il trucco del + è lo stesso del quadrato di binomio. Ci si dimentica sempre, ma almeno questa volta l'hanno già sentito.</p>
+            </aside>
+          </section>
+
+        </section>
+
+        <!-- SEZIONE 6: SOMMA/DIFFERENZA DI CUBI -->
+        <section>
+
+          <section>
+            <h2>Metodo 5: <em>Somma</em> e Differenza di Cubi</h2>
+            <div style="margin-top:1.5em;">
+              <p style="font-size:0.95em;line-height:1.8;">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:0.9em;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em;">In che cosa consiste:</span>
+                <span style="display:block;margin-top:0.5em;">La somma (o differenza) di due cubi si fattorizza come il prodotto di un <em>binomio</em> per un <em>falso quadrato</em> — un trinomio simile al quadrato perfetto, ma con il segno del termine misto invertito.</span>
+              </p>
+            </div>
+            <aside class="notes">
+              <p>Meno famoso degli altri — come il terzo album di una band: pochi lo conoscono, ma chi lo conosce lo apprezza molto.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Le <em>formule</em></h3>
+            <div class="two-columns">
+              <div>
+                <div class="math" style="font-size:0.85em;">$$A^3 + B^3 = (A+B)(A^2-AB+B^2)$$</div>
+                <div class="math" style="font-size:0.85em;">$$A^3 - B^3 = (A-B)(A^2+AB+B^2)$$</div>
+                <p style="font-size:0.76em;margin-top:0.8em;font-style:italic;">Il trinomio $A^2 \mp AB + B^2$ è detto <strong>falso quadrato</strong>: differisce dal quadrato di binomio solo per il fattore 2 nel termine misto.</p>
+              </div>
+              <div class="fragment">
+                <p style="font-size:0.82em;margin-bottom:0.4em;"><strong>Verifica per la somma:</strong></p>
+                <div class="math" style="font-size:0.8em;">
+                  $$(A+B)(A^2-AB+B^2)$$
+                  $$= A^3 - A^2B + AB^2 + A^2B - AB^2 + B^3 = A^3 + B^3$$
+                </div>
+                <div class="callout callout-warn" style="margin-top:0.8em;">
+                  <span class="callout-label">Regola dei segni:</span>
+                  Nel binomio: <em>stesso segno</em> dei cubi. Nel falso quadrato: il segno <em>opposto</em>.
+                </div>
+              </div>
+            </div>
+            <aside class="notes">
+              <p>Il falso quadrato non si fattorizza ulteriormente nei reali. Ha il discriminante negativo ed è irriducibile, come certi colleghi.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Esempio <em>svolto</em></h3>
+            <div class="math" style="font-size:0.88em;">$$8a^6 - 27b^3 = (2a^2)^3 - (3b)^3$$</div>
+            <div class="math" style="font-size:0.85em;">
+              $$= (2a^2 - 3b)\bigl((2a^2)^2 + 2a^2 \cdot 3b + (3b)^2\bigr)$$
+            </div>
+            <div class="math" style="font-size:0.88em;">$$= (2a^2 - 3b)(4a^4 + 6a^2b + 9b^2)$$</div>
+            <p style="font-size:0.82em;margin-top:0.8em;font-style:italic;">Questo prodotto notevole viene usato meno degli altri — ma quando i calcoli si fanno complessi, ricordarlo fa risparmiare molto tempo.</p>
+            <aside class="notes">
+              <p>Primo passo: riconoscere i cubi. Secondo passo: resistere alla tentazione di sviluppare tutto a mano.</p>
+            </aside>
+          </section>
+
+        </section>
+
+        <!-- SEZIONE 7: OSSERVAZIONI FINALI -->
+        <section>
+
+          <section>
+            <h2><em>Osservazioni</em> Finali</h2>
+            <div class="callout callout-warn" style="margin-top:1.5em;font-size:0.9em;line-height:1.8;">
+              <span class="callout-label">Punto fondamentale:</span>
+              I Prodotti Notevoli non sono altro che casi particolari di moltiplicazioni tra polinomi. Conviene <em>impararli a memoria</em> — ma la cosa fondamentale è usarli e leggerli <strong>in entrambe le direzioni</strong>:
+              <ul style="margin-top:0.5em;line-height:2;">
+                <li>da sinistra a destra → <strong>sviluppo</strong> (prodotti notevoli)</li>
+                <li>da destra a sinistra → <strong>scomposizione</strong> (fattorizzazione)</li>
+              </ul>
+            </div>
+            <aside class="notes">
+              <p>Entrambe le direzioni. Come le uscite di sicurezza: le indichi all'inizio e poi speri che nessuno le usi nel momento sbagliato.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3><em>Riepilogo</em> dei Prodotti Notevoli</h3>
+            <table class="summary-table">
+              <thead>
+                <tr><th>Prodotto</th><th>Risultato</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>$(A+B)(A-B)$</td><td>$A^2 - B^2$</td></tr>
+                <tr><td>$(A+B)^2$</td><td>$A^2 + 2AB + B^2$</td></tr>
+                <tr><td>$(A-B)^2$</td><td>$A^2 - 2AB + B^2$</td></tr>
+                <tr><td>$(A+B+C)^2$</td><td>$A^2+B^2+C^2+2AB+2AC+2BC$</td></tr>
+                <tr><td>$(A+B)^3$</td><td>$A^3 + 3A^2B + 3AB^2 + B^3$</td></tr>
+                <tr><td>$(A-B)^3$</td><td>$A^3 - 3A^2B + 3AB^2 - B^3$</td></tr>
+                <tr><td>$A^3 + B^3$</td><td>$(A+B)(A^2-AB+B^2)$</td></tr>
+                <tr><td>$A^3 - B^3$</td><td>$(A-B)(A^2+AB+B^2)$</td></tr>
+              </tbody>
+            </table>
+            <aside class="notes">
+              <p>Questa tabella è la versione "bigliettino di sopravvivenza". Non dirlo ad alta voce, ma funziona.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Esercizi <em>lampo</em></h3>
+            <p style="font-size:0.8em;margin-bottom:0.6em;">Riconosci il prodotto notevole e applica la regola — tutto a mente.</p>
+            <table class="summary-table" style="font-size:0.78em;">
+              <thead>
+                <tr><th>Esercizio</th><th>Soluzione</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>$(x+5)(x-5) =$</td>
+                  <td class="fragment">$x^2 - 25$</td>
+                </tr>
+                <tr>
+                  <td>$(2a-3)^2 =$</td>
+                  <td class="fragment">$4a^2 - 12a + 9$</td>
+                </tr>
+                <tr>
+                  <td>$(p+q+r)^2 =$</td>
+                  <td class="fragment">$p^2+q^2+r^2+2pq+2pr+2qr$</td>
+                </tr>
+                <tr>
+                  <td>$(x+1)^3 =$</td>
+                  <td class="fragment">$x^3 + 3x^2 + 3x + 1$</td>
+                </tr>
+                <tr>
+                  <td>$\left(-\tfrac{1}{2}x^2y - 2xy^3\right)\!\left(-\tfrac{1}{2}x^2y + 2xy^3\right) =$</td>
+                  <td class="fragment">$\tfrac{1}{4}x^4y^2 - 4x^2y^6$</td>
+                </tr>
+              </tbody>
+            </table>
+            <aside class="notes">
+              <p>L'ultimo esercizio separa chi ha capito davvero da chi ha imparato a memoria le prime quattro righe.</p>
+            </aside>
+          </section>
+
+          <section class="title-slide">
+            <h2 style="font-style:italic;font-size:1.6em;line-height:1.5;max-width:80%;margin:0 auto;">"Non hai veramente capito qualcosa fino a quando non sei in grado di spiegarlo a tua nonna."</h2>
+            <p style="margin-top:1.2em;font-size:0.95em;color:var(--primary);">— Albert Einstein</p>
+            <p style="margin-top:2em;font-size:0.7em;">
+              <a href="https://mathofthings.netlify.app" class="math-of-things-link">The Math of Things</a>
+            </p>
+            <aside class="notes">
+              <p>Se riesci a spiegarla senza formule, l'hai capita davvero. La nonna è il benchmark definitivo.</p>
+            </aside>
+          </section>
+
         </section>
 
       </div>
